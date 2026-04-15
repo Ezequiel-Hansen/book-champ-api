@@ -1,8 +1,8 @@
 import { DataTypes } from "sequelize";
-import { sequelize } from "../db/sql";
+import { sequelize } from "../db/sql.js";
 
 export const Book= sequelize.define("book",{
-id: {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true

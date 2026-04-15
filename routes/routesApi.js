@@ -5,7 +5,7 @@ const routes=Router()
 
 routes
     .get("/all",getAll)
-    .post("/create",create)
+    .post("/create", create)
     .get("/book/:id",getOne)
     .put("/update/:id",update)
     .delete("/deleteBook/:id",deleted)

@@ -1,3 +1,5 @@
+import {Book} from "../models/book.js"
+
 export const getAll= async(req, res)=>{
     try {
         const result=await Book.findAll()
@@ -19,7 +21,8 @@ export const getOne= async(req, res)=>{
 
 export const create= async(req, res)=>{
     try {
-        const {title, author, rating, pageCount, summary, imageUrl, available}=req.body
+        console.log(req.body)
+        const {title, author, rating, pageCount, summary, imageUrl, available}= req.body
         const result=await Book.create({title, author, rating, pageCount, summary, imageUrl, available})
         res.status(201).json(result)
     } catch (error) {
